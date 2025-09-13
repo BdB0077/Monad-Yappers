@@ -1,73 +1,128 @@
-<div class="section">
-    <h2>Gmonad Tracker</h2>
-    <a class="twitter-timeline" data-height="600" href="https://twitter.com/search?q=gmonad%20-filter%3Areplies" data-chrome="noheader nofooter">Gmonad Search Results</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monad-Yappers - Gmonad and Gnad Meme Tracker</title>
+    <meta name="description" content="Track 'gmonad' and 'gnad' memes on X with this simple, mobile-friendly page. Built using pure HTML/JS in under 15 minutes!">
+    <meta property="og:title" content="Monad-Yappers - Gmonad and Gnad Meme Tracker">
+    <meta property="og:description" content="A simple tracker for 'gmonad' and 'gnad' memes on X. No server required, accessible on any device.">
+    <meta property="og:url" content="https://bdb0077.github.io/Monad-Yappers/">
+    <meta property="og:type" content="website">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKNS93BC8W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YKNS93BC8W');
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ecf0f1;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .section {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        a.twitter-timeline {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="url"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1a252f;
+        }
+        .loading {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .section {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Monad-Yappers</h1>
+    <p style="text-align: center;">Tracking memes and posts for "gmonad" and "gnad" on X (Twitter). Built with pure HTML/JS in under 15 minutes!</p>
 
-<div class="section">
-    <h2>Gnad Tracker</h2>
-    <a class="twitter-timeline" data-height="600" href="https://twitter.com/search?q=gnad%20-filter%3Areplies" data-chrome="noheader nofooter">Gnad Search Results</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-<div class="section">
-    <h2>Submit Your Meme</h2>
-    <form action="mailto:princessamelia923@gmail.com" method="post" enctype="text/plain">
-        <label for="meme-url">Meme URL:</label><br>
-        <input type="url" id="meme-url" name="meme-url" required><br><br>
-        <label for="description">Description:</label><br>
-        <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
-        <input type="submit" value="Submit">
-    </form>
-</div>
-<p style=.section {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: white;
-}
-h1, h2 {
-    color: #2c3e50;
-    text-align: center;
-}
-body {
-    background-color: #ecf0f1;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-a.twitter-timeline {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 600px;
-}
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    .section {
-        padding: 10px;
-    }
-    form label {
-    display: block;
-    margin-top: 10px;
-}
-input[type="url"], textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-input[type="submit"] {
-    background-color: #2c3e50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-input[type="submit"]:hover {
-    background-color: #1a252f;
-}>This page uses X's official embed widgets to display live search results. No server needed!</p>
+    <div class="section">
+        <h2>Gmonad Tracker</h2>
+        <div class="loading">Loading tweets...</div>
+        <a class="twitter-timeline" data-height="600" href="https://twitter.com/search?q=gmonad%20-filter%3Areplies" data-chrome="noheader nofooter">Gmonad Search Results</a>
+    </div>
+
+    <div class="section">
+        <h2>Gnad Tracker</h2>
+        <div class="loading">Loading tweets...</div>
+        <a class="twitter-timeline" data-height="600" href="https://twitter.com/search?q=gnad%20-filter%3Areplies" data-chrome="noheader nofooter">Gnad Search Results</a>
+    </div>
+
+    <div class="section">
+        <h2>Submit Your Meme</h2>
+        <form action="mailto:princessamelia923@gmail.com" method="post" enctype="text/plain">
+            <label for="meme-url">Meme URL:</label><br>
+            <input type="url" id="meme-url" name="meme-url" required><br><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <p style="text-align: center; font-size: 0.8em;">This page uses X's official embed widgets to display live search results. No server needed!</p>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelines = document.querySelectorAll('.twitter-timeline');
+            timelines.forEach(timeline => {
+                timeline.style.opacity = '0.5';
+                timeline.insertAdjacentHTML('beforebegin', '<div class="loading">Loading tweets...</div>');
+            });
+            window.addEventListener('load', function() {
+                timelines.forEach(timeline => {
+                    timeline.style.opacity = '1';
+                    timeline.previousElementSibling.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
